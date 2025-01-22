@@ -1,0 +1,9 @@
+body
+{
+    background-color: lightgray;
+}
+
+.navbar-disabled-link
+{
+    color: var(--bs-nav-link-disabled-color);
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link th:replace="~{includes/css-links.html}"></link>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <nav th:replace="~{includes/navbar-for-admin.html}"></nav>
+    
+    <form class="login-form" method="post" th:action="@{/auth/login}">
+
+        <div class="mb-3 input-div">
+            <label for="exampleFormControlInput1" class="form-label">Username : </label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="username" placeholder="Enter username">
+        </div>
+
+        <div class="mb-3 input-div">
+            <label for="exampleFormControlInput1" class="form-label">News author : </label>
+            <input type="password" class="form-control" id="exampleFormControlInput1" name="password" placeholder="Enter password">
+        </div>
+
+        <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+
+    <script th:replace="~{includes/bootstrap-script.html}"></script>
+
+</body>
+</html>

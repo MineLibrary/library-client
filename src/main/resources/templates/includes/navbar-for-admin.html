@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" th:href="@{/}">MineLibrary Admin Dashboard</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item" th:if="${userRole.name() == 'ADMIN'}">
+            <a class="nav-link" aria-current="page" th:href="@{/admin}" th:text="#{navbar.links.see-news}" >See news</a>
+          </li>
+          <li class="nav-item" th:if="${userRole.name() == 'USER'}">
+            <a class="nav-link" aria-current="page" th:href="@{/}" th:text="#{navbar.links.see-news}">See news</a>
+          </li>
+          <li class="nav-item" th:if="${userRole.name() == 'ADMIN'}">
+            <a class="nav-link" th:href="@{/admin/add-news}" th:text="#{navbar.links.add-news}">Add news</a>
+          </li>
+          <li class="nav-item" th:if="${userRole.name() == 'SUPER_ADMIN'}">
+            <a class="nav-link" th:href="@{/superadmin/add-admin}" th:text="#{navbar.links.add-admin-user}">Add Admin User</a>
+          </li>
+          <li class="nav-item" th:if="${userRole.name() == 'SUPER_ADMIN'}">
+            <a class="nav-link" th:href="@{/superadmin}" th:text="#{navbar.links.see-admin-users}">See Admin Users</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="#{navbar.links.language}">
+              Language
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" th:href="@{|?lang=az|}" th:text="#{navbar.languages.Azerbaijani}">Azerbaijani</a></li>
+              <li><a class="dropdown-item" th:href="@{|?lang=en|}" th:text="#{navbar.languages.English}">English</a></li> -->
+              <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+            <!-- </ul>
+          </li> 
+
+          <li class="nav-item" th:if="${userRole.name() == 'ADMIN'}">
+            <a class="nav-link navbar-disabled-link" th:href="@{/auth/logout}" th:text="#{navbar.links.log-out}">Log out</a>
+          </li>  -->
+          
+          <!-- <li class="nav-item">
+            <a class="nav-link active" href="#">Pricing</a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
