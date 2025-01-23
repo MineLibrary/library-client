@@ -38,6 +38,9 @@ public interface LibraryAdpClient
     @PostMapping(value = "/auth/authenticate")
     public BaseResponse<LoginResponse> authenticateAdminUser(@RequestBody LoginRequest loginRequest);
 
+    @GetMapping(value = "/auth/is-authenticated")
+    public BaseResponse<Boolean> isAuthenticated();
+
     @PostMapping(value = "/api/v1/author")
     public BaseResponse<Void> createAuthor(@RequestBody AuthorRequest authorRequest);
 
