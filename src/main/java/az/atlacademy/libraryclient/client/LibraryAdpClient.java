@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
 
+import az.atlacademy.libraryclient.config.LibraryAdpClientConfig;
 import az.atlacademy.libraryclient.model.dto.request.AuthorRequest;
 import az.atlacademy.libraryclient.model.dto.request.BookRequest;
 import az.atlacademy.libraryclient.model.dto.request.CategoryRequest;
@@ -32,7 +33,11 @@ import az.atlacademy.libraryclient.model.dto.response.OrderResponse;
 import az.atlacademy.libraryclient.model.dto.response.StudentResponse;
 
 
-@FeignClient(name = "library-adp-client", url = "${application.feign-client-url.libraryadp}")
+@FeignClient(
+    name = "library-adp-client", 
+    url = "${application.feign-client-url.libraryadp}",
+    configuration = LibraryAdpClientConfig.class
+)
 public interface LibraryAdpClient 
 {
     @PostMapping(value = "/auth/authenticate")
