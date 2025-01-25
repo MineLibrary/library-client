@@ -3,7 +3,6 @@ package az.atlacademy.libraryclient.client;
 import java.util.List;
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.multipart.MultipartFile;
 
 import az.atlacademy.libraryclient.config.LibraryAdpClientConfig;
@@ -150,7 +148,6 @@ public interface LibraryAdpClient
     public BaseResponse<Void> createOrder(@RequestBody OrderRequest orderRequest);
 
     @GetMapping(value = "/api/v1/order")
-    @ResponseStatus(value = HttpStatus.OK)
     public BaseResponse<List<OrderResponse>> getOrders(
         @RequestParam(value = "pageNumber", required = false, defaultValue = "0") int pageNumber,
         @RequestParam(value = "pageSize", required = false, defaultValue = "10") int pageSize
@@ -197,7 +194,6 @@ public interface LibraryAdpClient
     public BaseResponse<StudentResponse> getStudentById(@PathVariable(value = "id") long studentId);
 
     @GetMapping(value = "/api/v1/student")
-    @ResponseStatus(value = HttpStatus.OK)
     public BaseResponse<List<StudentResponse>> getStudents(
         @RequestParam(value = "pageNumber", required = false, defaultValue = "0") int pageNumber,
         @RequestParam(value = "pageSize", required = false, defaultValue = "10") int pageSize
