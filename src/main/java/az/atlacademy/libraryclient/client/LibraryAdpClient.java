@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -121,7 +120,7 @@ public interface LibraryAdpClient
     );
 
     @PostMapping(value = "/api/v1/book/{id}/upload-image", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public ResponseEntity<BaseResponse<Void>> uploadBookImage(
+    public BaseResponse<Void> uploadBookImage(
         @PathVariable(value = "id") long bookId,
         @RequestParam(value = "file", required = true) MultipartFile file
     );
