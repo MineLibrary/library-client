@@ -29,8 +29,12 @@ public class LibraryAdpClientInterceptor implements RequestInterceptor
 
     private boolean requiresAuthentication(String url, String method)
     {
-        if (method == "GET" && (!url.startsWith("/auth/is-authenticated"))) 
-        {
+        if (
+            method == "GET" && 
+            !url.startsWith("/auth/is-authenticated") && 
+            !url.startsWith("/api/v1/order") &&
+            !url.startsWith("/api/v1/student")
+        ){
             return false; 
         }
         return true;
